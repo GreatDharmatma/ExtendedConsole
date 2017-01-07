@@ -1,6 +1,5 @@
 (function (console) {
     "use strict";
-    var _this = this;
     var getBox = function (width, height) {
         return {
             string: "+",
@@ -11,8 +10,8 @@
         if (scale === void 0) { scale = 1; }
         var img = new Image();
         img.onload = function () {
-            var dim = getBox(_this.width * scale, _this.height * scale);
-            console.log("%c" + dim.string, dim.style + "background: url(" + url + "); background-size: " + (_this.width * scale) + "px " + (_this.height * scale) + "px; color: transparent;");
+            var dim = getBox(img.width * scale, img.height * scale);
+            console.log("%c" + dim.string, dim.style + "background: url(" + url + "); background-size: " + (img.width * scale) + "px " + (img.height * scale) + "px; color: transparent;");
         };
         img.src = url;
     };

@@ -10,8 +10,8 @@
     console.logImage = (url: string, scale: number = 1): void => {
         var img = new Image();
         img.onload = () => {
-            var dim = getBox(this.width * scale, this.height * scale);
-            console.log("%c" + dim.string, dim.style + "background: url(" + url + "); background-size: " + (this.width * scale) + "px " + (this.height * scale) + "px; color: transparent;");
+            var dim = getBox(img.width * scale, img.height * scale);
+            console.log("%c" + dim.string, dim.style + "background: url(" + url + "); background-size: " + (img.width * scale) + "px " + (img.height * scale) + "px; color: transparent;");
         };
         img.src = url;
     };
